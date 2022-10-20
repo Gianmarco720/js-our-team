@@ -68,9 +68,13 @@ for (let i = 0; i < members.length; i++) {
    // stampo nella DOM le informazioni sottoforma di stringhe
     const memberCard =
         `<div class="col-4">
-            <img class="img-fluid" src="${thisMember.image}" alt="">
-            <h5>${thisMember.name}</h5>
-            <span>${thisMember.role}</h5>
+            <div class="card">
+                <img src="${thisMember.image}" class="img-fluid card-img-top" alt="our member">
+                <div class="card-body">
+                    <h6 class="display-block">${thisMember.name}</h6>
+                    <span>${thisMember.role}</span>
+                </div>
+            </div>
         </div>`;
 
     const row = document.querySelector('.row');
