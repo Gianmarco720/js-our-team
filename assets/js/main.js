@@ -6,37 +6,37 @@ const members = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        image: 'wayne-barnett-founder-ceo.jpg'
+        image: './assets/img/wayne-barnett-founder-ceo.jpg'
     },
 
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        image: 'angela-caroll-chief-editor.jpg',
+        image: './assets/img/angela-caroll-chief-editor.jpg',
     },
 
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        image: 'walter-gordon-office-manager.jpg',
+        image: './assets/img/walter-gordon-office-manager.jpg',
     },
 
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager.jpg',
+        image: './assets/img/angela-lopez-social-media-manager.jpg',
     },
 
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        image: 'scott-estrada-developer.jpg',
+        image: './assets/img/scott-estrada-developer.jpg',
     },
 
     {
         name: 'Barbara Ramos',
         role: 'Grafic designer',
-        image: 'barbara-ramos-graphic-designer.jpg',
+        image: './assets/img/barbara-ramos-graphic-designer.jpg',
     },
 ]
 console.log(members);
@@ -56,15 +56,23 @@ for (let i = 0; i < members.length; i++) {
     for(let key in thisMember) {
         let membersDetails = thisMember[key];
         console.log(`${key}: ${membersDetails}`)
-    }
-}
+    };
+    /* 
+       /MILESTONE 1
+    */
 
-/* 
-   /MILESTONE 1
-*/
+   /* 
+      MILESTONE 2
+   */
+   
+   // stampo nella DOM le informazioni sottoforma di stringhe
+    const memberCard =
+        `<div class="col-4">
+            <img class="img-fluid" src="${thisMember.image}" alt="">
+            <h5>${thisMember.name}</h5>
+            <span>${thisMember.role}</h5>
+        </div>`;
 
-/* 
-   MILESTONE 2
-*/
-
-// stampo nella DOM le informazioni sottoforma di stringhe
+    const row = document.querySelector('.row');
+    row.insertAdjacentHTML('beforeend', memberCard)
+};
