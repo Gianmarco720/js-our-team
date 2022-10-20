@@ -52,9 +52,11 @@ console.log(members);
 // stampo in console le informazioni di nome, ruolo e stringa della foto
 for (let i = 0; i < members.length; i++) {
     const thisMember = members[i];
-    console.log(`Member ${i} Name : ` + thisMember.name);
-    console.log(`Member ${i} Role: ` + thisMember.role);
-    console.log(`Member ${i} Image: ` + thisMember.image);
+
+    for(let key in thisMember) {
+        let membersDetails = thisMember[key];
+        console.log(`${key}: ${membersDetails}`)
+    }
 }
 
 /* 
